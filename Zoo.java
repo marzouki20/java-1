@@ -1,16 +1,16 @@
 public class Zoo {
     // Attributes
-    private Animal[] animals;
-    private String name;
-    private String city;
-    private int nbrCages;
-    private int count;
+    public Animal[] animals;
+    public String name;
+    public String city;
+    public static final int NBR_CAGES = 25;
+
+    public int count;
 
 
-    public Zoo(String name, String city, int nbrCages) {
+    public Zoo(String name, String city) {
         this.name = name;
         this.city = city;
-        this.nbrCages = nbrCages;
         this.animals = new Animal[25];
         this.count = 0;
     }
@@ -29,7 +29,7 @@ public class Zoo {
     public void displayZoo() {
         System.out.println("zoo Nammme " + name);
         System.out.println("place " + city);
-        System.out.println("Nbr cages " + nbrCages);
+        System.out.println("Nbr cages " + NBR_CAGES);
         System.out.println("animaaalss:::");
         for (int i = 0; i < count; i++) {
             animals[i].displayAnimal();
@@ -45,4 +45,31 @@ public class Zoo {
 
             return -1;
     }
+
+
+//commmmmpttt
+
+    public boolean removeAnimal(Animal animal) {
+        for (int i = 0; i < count; i++) {
+            if (animals[i].equals(animal)) {
+                for (int j = i; j < count - 1; j++) {
+                    animals[j] = animals[j + 1];
+                }
+                animals[count - 1] = null;
+                count--;
+                return true;
+            }
+        }
+        return false;
+    }
+//fuuulllll
+public boolean isZooFull() {
+    return count >= NBR_CAGES;
+}
+//commmparaisonn
+public static Zoo comparerZoo(Zoo z1, Zoo z2) {
+    if (z1.count >= z2.count) return z1;
+    else return z2;
+}
+
 }

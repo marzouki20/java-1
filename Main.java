@@ -4,7 +4,7 @@ public class Main {
         Animal lion = new Animal();
         Animal eagle = new Animal("3asfour", "Eagle", 3, false);
 
-        Zoo myZoo = new Zoo("lafayetttt", "Tunis", 20);
+        Zoo myZoo = new Zoo("lafayetttt", "Tunis");
 
         myZoo.addAnimal(lion);
         myZoo.addAnimal(eagle);
