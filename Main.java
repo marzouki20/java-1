@@ -1,20 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        // Create animals
+
         Animal lion = new Animal();
-        Animal eagle = new Animal("Accipitridae", "Eagle", 3, false);
+        Animal eagle = new Animal("3asfour", "Eagle", 3, false);
 
-        // Create zoo
-        Zoo myZoo = new Zoo("Safari Park", "Tunis", 20);
+        Zoo myZoo = new Zoo("lafayetttt", "Tunis", 20);
 
-        // Add animals
         myZoo.addAnimal(lion);
         myZoo.addAnimal(eagle);
+      int find = myZoo.searchAnimal(lion);
+        if (find == -1) {
+            System.out.println("Animal not found");
+        }
+        else {
+            System.out.println("Animal found");
+        }
 
-        // Display zoo
-        myZoo.displayZoo();
 
-        // Test toString
-        System.out.println(lion);   // calls Zoo.toString()
+
+
+       // myZoo.displayZoo();
+
+
+       // System.out.println(lion);
     }
 }

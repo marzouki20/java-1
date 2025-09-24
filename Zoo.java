@@ -4,34 +4,45 @@ public class Zoo {
     private String name;
     private String city;
     private int nbrCages;
-    private int count; // to track number of animals added
+    private int count;
 
-    // Constructor
+
     public Zoo(String name, String city, int nbrCages) {
         this.name = name;
         this.city = city;
         this.nbrCages = nbrCages;
-        this.animals = new Animal[25]; // max 25 animals
+        this.animals = new Animal[25];
         this.count = 0;
     }
 
-    // Add animal to zoo
-    public void addAnimal(Animal animal) {
+
+    Boolean addAnimal(Animal animal) {
         if (count < animals.length) {
             animals[count++] = animal;
+            return true;
         } else {
-            System.out.println("....");
+            return false;
         }
     }
 
-    // Display zoo info
+
     public void displayZoo() {
-        System.out.println("Zoo Name: " + name);
-        System.out.println("City: " + city);
-        System.out.println("Number of cages: " + nbrCages);
-        System.out.println("Animals in the zoo:");
+        System.out.println("zoo Nammme " + name);
+        System.out.println("place " + city);
+        System.out.println("Nbr cages " + nbrCages);
+        System.out.println("animaaalss:::");
         for (int i = 0; i < count; i++) {
-            System.out.println(animals[i]);
+            animals[i].displayAnimal();
         }
+    }
+    int searchAnimal(Animal animal) {
+        for (int i = 0; i < count; i++) {
+            if (animals[i] == animal) {
+                return i;
+
+            }
+        }
+
+            return -1;
     }
 }
