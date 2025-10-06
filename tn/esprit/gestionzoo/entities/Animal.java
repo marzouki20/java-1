@@ -7,7 +7,11 @@ public class Animal {
     private int age;
     private boolean isMammal;
 
-//name
+    public Animal() {
+
+    }
+
+    //name
     public String getName() {
         return name;
     }
@@ -47,7 +51,7 @@ public class Animal {
 
 
 
-    public Animal() {
+    public Animal(String name, int age) {
         this.family =  "mejri";
         this.name = "aziz";
         this.age = 20;
@@ -69,6 +73,9 @@ public class Animal {
     }
 
 
+    public String toString() {
+        return "Name: " + name + ", Age: " + age;
+    }
 
 
 }

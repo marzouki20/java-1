@@ -5,7 +5,9 @@ import tn.esprit.gestionzoo.entities.Zoo;
     public class Main {
         public static void main(String[] args) {
 
-            Animal lion = new Animal();
+            String name="7ayewen";
+            int age=0;
+            Animal lion = new Animal(name, age);
             Animal eagle = new Animal("3asfour", "Eagle", 3, false);
 
             Zoo myZoo = new Zoo("lafayetttt", "Tunis");
