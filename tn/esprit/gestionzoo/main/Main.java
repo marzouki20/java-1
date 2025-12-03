@@ -2,7 +2,11 @@ package tn.esprit.gestionzoo.main;
 
 import tn.esprit.gestionzoo.entities.Animal;
 import tn.esprit.gestionzoo.entities.Zoo;
-    public class Main {
+
+import java.awt.desktop.QuitStrategy;
+import java.util.Scanner;
+
+public class Main {
         public static void main(String[] args) {
 
             String name="7ayewen";
@@ -21,8 +25,9 @@ import tn.esprit.gestionzoo.entities.Zoo;
             else {
                 System.out.println("tn.esprit.gestionzoo.entities.Animal found");
             }
-
-
+            string aziz;
+            scanner aziz = new Scanner(System.in);
+            System.out.println("myZoo comporte" ,nbrcage,"cage");
 
 
            // myZoo.displayZoo();

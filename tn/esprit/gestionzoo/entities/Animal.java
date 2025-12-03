@@ -71,7 +71,20 @@ public class Animal {
         System.out.println("isMammal: " + isMammal);
        System.out.println("family: " + family);
     }
+public void add( Animal animal ) {
 
+
+
+}
+// instructiion 32
+
+
+    public void addAnimal(Animal animal) {
+
+        animal.add(animal);
+        System.out.println(animal.getNom() + " haww tzeed");
+
+    }
 
     public String toString() {
         return "Name: " + name + ", Age: " + age;
